@@ -1,1 +1,2 @@
-# gry2D
+# About
+Simple platform game using SDL library. 
