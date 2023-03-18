@@ -1,6 +1,24 @@
+#include <iostream>
 #include "Square.h"
-#include "Globals.h"
+#include "Tile.h"
 
+Square::Square()
+{
+	mSquare.w = SQUARE_SIZE;
+	mSquare.h = SQUARE_SIZE;
+
+	mSquare.x = 10;
+	mSquare.y = 600;
+
+	//Initialize the velocity
+	mVelX = 0;
+	mVelY = 0;
+
+	//Jump
+	startingPositionX = mSquare.x;
+	startingPositionY = mSquare.y;
+	accelerationX = 0;
+}
 
 bool checkCollision(SDL_Rect a, SDL_Rect b)
 {
@@ -67,7 +85,6 @@ bool touchesWall(SDL_Rect box, std::vector<Tile>& tiles)
 	return false;
 }
 
-
 bool touchesTop(SDL_Rect box, std::vector<Tile>& tiles)
 {
 	for (int i = 0; i < tiles.size(); ++i)
@@ -80,24 +97,6 @@ bool touchesTop(SDL_Rect box, std::vector<Tile>& tiles)
 		}
 	}
 	return false;
-}
-
-Square::Square()
-{
-	mSquare.w = SQUARE_SIZE;
-	mSquare.h = SQUARE_SIZE;
-
-	mSquare.x = 10;
-	mSquare.y = 600;
-
-	//Initialize the velocity
-	mVelX = 0;
-	mVelY = 0;
-
-	//Jump
-	startingPositionX = mSquare.x;
-	startingPositionY = mSquare.y;
-	accelerationX = 0;
 }
 
 void Square::calculate()

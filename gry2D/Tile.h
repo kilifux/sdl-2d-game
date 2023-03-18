@@ -1,11 +1,11 @@
 #pragma once
-#include "LTexture.h"
+
+#include "Globals.h"
 
 //Scene textures
 extern LTexture gSquareTexture;
 extern LTexture gTileTexture;
 extern SDL_Rect gTileClips[TOTAL_TILE_SPRITES];
-
 
 class Tile
 {

@@ -2,13 +2,11 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
-#include "Tile.h"
-#include "Globals.h"
 #include <vector>
 
 bool checkCollision(SDL_Rect a, SDL_Rect b);
-bool touchesWall(SDL_Rect box, std::vector<Tile>& tiles);
-bool touchesTop(SDL_Rect box, std::vector<Tile>& tiles);
+bool touchesWall(SDL_Rect box, std::vector<class Tile>& tiles);
+bool touchesTop(SDL_Rect box, std::vector<class Tile>& tiles);
 
 class Square
 {

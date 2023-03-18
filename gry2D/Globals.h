@@ -1,10 +1,19 @@
 #pragma once
+
+#include <vector>
 #include "LTexture.h"
-#include <iostream>
 
 //Starts up SDL and creates window
 bool init();
 
+//Loads media
+bool loadMedia(std::vector<class Tile>& tiles);
+
+//Frees media and shuts down SDL
+void close(std::vector<class Tile>& tiles);
+
+//Sets tiles from tile map
+bool setTiles(std::vector<class Tile>& tiles, std::string path);
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
@@ -31,7 +40,6 @@ const char TILE_PEAK = 'P';
 extern float Layer1;
 extern float Layer2;
 extern float Layer3;
-
 
 const char NULL_TILE = ' ';
 

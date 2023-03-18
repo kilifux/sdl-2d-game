@@ -1,4 +1,5 @@
 #include "LTexture.h"
+#include "Globals.h"
 
 LTexture::LTexture()
 {
